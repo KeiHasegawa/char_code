@@ -149,8 +149,27 @@ printf("\"abcdef\"\n");
 
 test007.c は運良く(?) コンパイルエラーになった.
 
+% gcc test007.c
+
 これは '\' = 0x5c の次に '"' が続いたので文字列リテラルの終端をコンパイラ
 が検出できなかったためである.
+
+% hcpp.exe test007.c -o test007.i -I...
+% hcc1.exe test007.i -o test007.s
+
+残念ながら hcc1.exe でもエラーになってしまう. 仮に hcc1.exe を修正できたとしても
+今度は printf 自体が正しく動作するかは別問題である.
+# しかしそれは hcc1.exe を修正しない理由にはならない.
+
+cygwin% gcc test011.c
+cygwin% ./a.exe
+
+これは期待通り動作したが,
+
+linux% gcc test011.c
+linux% ./a.out
+
+これは文字化けしている.
 
 test008.c はプログラム実行時文字化けを引き起こしている.
 
