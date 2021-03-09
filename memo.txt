@@ -19,6 +19,8 @@ http://charset.7jp.net/sjis.html
 0xa1 ... 0xdf
 に割り当てられていることが分かる.
 
+2 バイトコードの 2 バイト目は 0x40 ... 0xfc の可能性がある.
+
 (*2) C++ スタイルのコメント
 
 // This is a C++ style comment.
