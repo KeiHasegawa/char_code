@@ -45,7 +45,7 @@ g++ で試してみると test001.cpp, test002.cpp は残念ながらエラーになってしまう.
 
 cygwin% hcpp.exe test001.cpp
 
-としてみるとこれは一応正しく動作しているようだ. これは cygwin ビルドの
+としてみるとこれは一応正しく動作しているようだ. これは Windows 版ビルドの
 hcpp.exe で試した結果であるが,
 
 linux% hcpp.exe test001.cpp
@@ -55,6 +55,8 @@ linux% hcpp.exe test001.cpp
 linux% hcpp.exe -e sjis test001.cpp
 
 ならば期待通り動作している.
+
+一応 Visual Studio 2019 のコンパイラでも試してみたが, 正しく動作している.
 
 プログラムテキストではないが, 例えば, Windows スタイルのパス名は
 '\' が区切りになっているから,
