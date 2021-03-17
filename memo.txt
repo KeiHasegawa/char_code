@@ -136,7 +136,7 @@ Shift-JIS ‚Ì 2 ƒoƒCƒg–Ú‚ª 0x0a ‚â 0x0d ‚Å‚ ‚é‚±‚Æ‚Í‚È‚¢‚Ì‚Å‚±‚Ì‚æ‚¤‚È–â‘è‚Í‹N‚±‚
 ’†‚É // ‚ª•\‚ê‚Ä‚à’Pƒ‚É–³Ž‹‚³‚ê‚é‚¾‚¯‚Å‚ ‚é.
 •¶Žš—ñƒŠƒeƒ‰ƒ‹’†‚È‚ç‚Ç‚¤‚©.
 
-cost char* p = "’É¯¯";
+const char* p = "’É¯¯";
 
 ¯ ‚Í JIS ƒR[ƒh‚Ì 0x2f = '/' ‚Å‚ ‚é. ‚µ‚©‚µ•¶Žš—ñ’†‚Ì // ‚ÍƒRƒƒ“ƒg‚ÌŽn‚Ü‚è‚Å‚Í
 ‚È‚¢‚©‚ç‚±‚Ìê‡‚à–â‘è‚É‚Í‚È‚ç‚È‚¢.
