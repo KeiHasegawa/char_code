@@ -264,14 +264,14 @@ test007.c は運良く(?) コンパイルエラーになった.
 % gcc test036.c -finput-charset=sjis
 % ./a.exe > b
 
-b は期待しないもの.
+b は期待値とは異なる.
 
 % gcc test036.c -finput-charset=sjis -fexec-charset=sjis
 なんだか bug report を送れというメッセージが出る.
 
 % gcc test037.c -finput-charset=sjis
 % ./a.exe > b
-b は期待したもの!
+b は期待値と合致!
 
 -finput-charset=sjis オプションありなら test037.c が期待通り動作
 するのに test036.c が動作しないのは... 全く訳が分からない.
