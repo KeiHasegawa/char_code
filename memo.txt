@@ -46,9 +46,12 @@ g++ で試してみると test001.cpp, test002.cpp は残念ながらエラーになってしまう.
 
 のように試してみると, 期待しない形式でコメントが削除されていることが分かる.
 
+% g++ -E test001.cpp -finput-charset=sjis
+期待した形でコメントを解釈してくれている
 % g++ -c test001.cpp -finput-charset=sjis
+OK
 
-こうすると期待通り動作する. しかし, (*5) の test007.c の例も参照.
+しかし, (*5) の test007.c の例も参照.
 
 cygwin% hcpp.exe test001.cpp
 
