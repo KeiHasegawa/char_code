@@ -46,6 +46,10 @@ g++ で試してみると test001.cpp, test002.cpp は残念ながらエラーになってしまう.
 
 のように試してみると, 期待しない形式でコメントが削除されていることが分かる.
 
+% g++ -c test001.cpp -finput-charset=sjis
+
+こうすると期待通り動作する. しかし, (*5) の test007.c の例も参照.
+
 cygwin% hcpp.exe test001.cpp
 
 としてみるとこれは一応正しく動作しているようだ. これは Windows 版ビルドの
@@ -244,6 +248,25 @@ test007.c は運良く(?) コンパイルエラーになった.
 
 これは '\' = 0x5c の次に '"' が続いたので文字列リテラルの終端をコンパイラ
 が検出できなかったためである.
+
+% gcc test007.c -finput-charset=sjis
+
+ではどうか. どうやら標準ヘッダでエラーが出ている.
+
+% gcc test036.c -finput-charset=sjis
+% ./a.exe > b
+
+b は期待しないもの.
+
+% gcc test036.c -finput-charset=sjis -fexec-charset=sjis
+なんだか bug report を送れというメッセージが出る.
+
+% gcc test037.c -finput-charset=sjis
+% ./a.exe > b
+b は期待したもの!
+
+-finput-charset=sjis オプションありなら test037.c が期待通り動作
+するのに test036.c が動作しないのは... 全く訳が分からない.
 
 test007.c ではだめだが, プログラマ自身が文字コードを配列に指定することは
 可能である. 例えば
