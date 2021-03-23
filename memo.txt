@@ -221,6 +221,11 @@ JIS でコーディングしたもの => test021.c
 % gcc test021.c
 
 とするとそうなっていると気付くだろう.
+
+% gcc test021.c -finput-charset=jis
+cc1: error: conversion from jis to UTF-8 not supported by iconv
+対応していないとのことだった.
+
 一応 Visual Studio 2019 のコンパイラでも試してみた. やはり問題の箇所をコメントの終わ
 りと受け取っているようである.
 
