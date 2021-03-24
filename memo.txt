@@ -51,7 +51,7 @@ g++ で試してみると test001.cpp, test002.cpp は残念ながらエラーになってしまう.
 % g++ -c test001.cpp -finput-charset=sjis
 OK
 
-しかし, (*5) の test007.c の例も参照.
+しかし, (*5) の test007.c や test038.c の例も参照.
 
 cygwin% hcpp.exe test001.cpp
 
