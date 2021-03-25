@@ -264,7 +264,7 @@ test007.c は運良く(?) コンパイルエラーになった.
 % gcc test036.c -finput-charset=sjis
 % ./a.exe > b
 
-b は期待値とは異なる.
+エラーは回避できたが b は残念ながら期待値とは異なる.
 
 % gcc test036.c -finput-charset=sjis -fexec-charset=sjis
 なんだか bug report を送れというメッセージが出る.
@@ -279,15 +279,15 @@ b は期待値と合致!
 少し横道にそれるようだが, -finput-charset=sjis オプションで標準ヘッダ
 でエラーになる原因を調査してみた. エラーを再現させる簡単な環境 => test038.c
 
-% gcc -c test038.c -finput-charset=sjis
-エラーになる
 % gcc -c test038.c
 OK
+% gcc -c test038.c -finput-charset=sjis
+エラーになる
 % gcc -c test038.c -finput-charset=sjis -E
 期待しない形になっている.
 
 この現象だけから推測すると... 行末の \ を無視するというのが -finput-charset=sjis
-オプションの効果の 1 つということになる. このバグを駆使して功名なサンプルを作成する
+オプションの効果の 1 つということになる. このバグを駆使して巧妙なサンプルを作成する
 には時間がもったいない. それにこれは横道にそれただけなのだ.
 
 test007.c ではだめだが, プログラマ自身が文字コードを配列に指定することは
