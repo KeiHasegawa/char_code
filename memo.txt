@@ -106,7 +106,7 @@ int anger;
 2f 2f 20    1b  24 42 45 5c 1b  28 42 0a
 /  /  (空白) ESC $  B   怒   ESC (  B  改行
 
-ここで ESC $ B は漢字の開始, ESC ( B は ASCII の開始である
+ここで ESC $ B は漢字の開始, ESC ( B は ASCII の開始である.
 5c の後に ASCII の開始があるので Shift-JIS のような問題は起こらない.
 
 UTF-8 にはどのバイトにも 0x5c が出現することはないのでこの問題は起こらない.
